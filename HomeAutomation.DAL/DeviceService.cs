@@ -6,44 +6,44 @@ using System.Collections.Generic;
 
 namespace HomeAutomation.DAL
 {
-    public class DeviceService: IDbService<Device>
+    public class ApplianceService : IDbService<Appliance>
     {
-        private IMongoCollection<Device> _devices = null;
-        public DeviceService(IDb<IMongoDatabase> database)
+        private readonly IMongoCollection<Appliance> _appliances = null;
+        public ApplianceService(IDb<IMongoDatabase> database)
         {
             IMongoDatabase databaseInstance = database.Instance;
-            _devices = databaseInstance.GetCollection<Device>("Devices");
+            _appliances = databaseInstance.GetCollection<Appliance>("Devices");
         }
 
-        public void Delete(Device deviceToRemove)
+        public void Delete(Appliance applianceToRemove)
         {
-            _devices.DeleteOne(device => device.Id == deviceToRemove.Id);
+            _appliances.DeleteOne(appliance => appliance.Id == applianceToRemove.Id);
         }
 
-        public void Delete(string deviceIdToRemove)
+        public void Delete(string applianceIdToRemove)
         {
-            _devices.DeleteOne(device => device.Id == deviceIdToRemove);
+            _appliances.DeleteOne(appliance => appliance.Id == applianceIdToRemove);
         }
 
-        public Device Get(string deviceId)
+        public Appliance Get(string applianceId)
         {
-            return _devices.Find<Device>(device => device.Id == deviceId).FirstOrDefault();
+            return _appliances.Find<Appliance>(appliance => appliance.Id == applianceId).FirstOrDefault();
         }
 
-        public List<Device> GetAll()
+        public List<Appliance> GetAll()
         {
-            return _devices.Find(device => true).ToList();
+            return _appliances.Find(appliance => true).ToList();
         }
 
-        public Device Insert(Device device)
+        public Appliance Insert(Appliance appliance)
         {
-            _devices.InsertOne(device);
-            return device;
+            _appliances.InsertOne(appliance);
+            return appliance;
         }
 
-        public bool Update(string deviceId, Device deviceToUpdate)
+        public bool Update(string applianceId, Appliance applianceToUpdate)
         {
-            ReplaceOneResult updateResult = _devices.ReplaceOne(device => device.Id == deviceId, deviceToUpdate);
+            ReplaceOneResult updateResult = _appliances.ReplaceOne(appliance => appliance.Id == applianceId, applianceToUpdate);
             return updateResult.IsAcknowledged;
         }
     }

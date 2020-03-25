@@ -1,16 +1,16 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.Collections.Generic;
 
 namespace HomeAutomation.Models
 {
-    public class Device
+    public class Floor
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         [BsonElement("Name")]
-        public string DeviceName { get; set; }
-        public bool IsContinousOn { get; set; }
-        public bool IsHighVoltageRequired { get; set; }
+        public string FloorName { get; set; }
+        public List<Room> Rooms { get; set; }
     }
 }
