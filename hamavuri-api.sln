@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAutomation.Api", "HomeAutomation.Api\HomeAutomation.Api.csproj", "{FE2FC926-327D-441F-81D5-3410A17AAFBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAutomation.Common", "HomeAutomation.Common\HomeAutomation.Common.csproj", "{C7E2E10A-CE12-494A-B592-159322DD28FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAutomation.Common", "HomeAutomation.Common\HomeAutomation.Common.csproj", "{C7E2E10A-CE12-494A-B592-159322DD28FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAutomation.DAL", "HomeAutomation.DAL\HomeAutomation.DAL.csproj", "{0D1613B1-8F98-498E-A392-FF226AD69E5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAutomation.DAL", "HomeAutomation.DAL\HomeAutomation.DAL.csproj", "{0D1613B1-8F98-498E-A392-FF226AD69E5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAutomation.Models", "HomeAutomation.Models\HomeAutomation.Models.csproj", "{1104515C-71E4-4752-9432-2F4B6E7E5883}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAutomation.Models", "HomeAutomation.Models\HomeAutomation.Models.csproj", "{1104515C-71E4-4752-9432-2F4B6E7E5883}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAutomation.BAL", "HomeAutomation.BAL\HomeAutomation.BAL.csproj", "{5EFEC24A-193D-4EAC-98F3-6AB8AE93B5CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeAutomation.BAL", "HomeAutomation.BAL\HomeAutomation.BAL.csproj", "{5EFEC24A-193D-4EAC-98F3-6AB8AE93B5CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeAutomation.Auth", "HomeAutomation.Authentication\HomeAutomation.Auth.csproj", "{384E81B2-6605-4AC4-A233-EACF35644460}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5EFEC24A-193D-4EAC-98F3-6AB8AE93B5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EFEC24A-193D-4EAC-98F3-6AB8AE93B5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EFEC24A-193D-4EAC-98F3-6AB8AE93B5CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{384E81B2-6605-4AC4-A233-EACF35644460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384E81B2-6605-4AC4-A233-EACF35644460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384E81B2-6605-4AC4-A233-EACF35644460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384E81B2-6605-4AC4-A233-EACF35644460}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
